@@ -3,27 +3,13 @@ const Manager = require('../lib/manager');
 
 // test needing to be ran against manager
 describe("Manager", () => {
-    describe("getOfficeNum", () => {
-        it("should return the new manager office number", () => {
-            const officeNum = "101";
-
-            const result = new Manager().getOfficeNum(officeNum);
-
-            expect(result).toEqual(officeNum)
-        });
-    });
-    describe("getRole", () => {
-        it("should return the role of Manager", () => {
-            const role = "Manager";
-
-            const result = new Manager().getRole(role);
-
-            expect(result).toEqual(role);
+    describe("getProperties", () => {
+        it("should return the given properties", () => {
+            const managerObj = new Manager("Bob", 342, "Bob@gmail.com", "Manager");
+            expect(managerObj.getName()).toEqual("Bob");
+            expect(managerObj.getId()).toEqual(342);
+            expect(managerObj.getEmail()).toEqual("Bob@gmail.com");
+            expect(managerObj.getRole()).toEqual("Manager");
         });
     });
 });
-// can set office number via constructor argument
-
-// getRole() should return manager
-
-// can get office number via getOffice()

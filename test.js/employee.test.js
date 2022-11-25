@@ -3,40 +3,15 @@ const Employee = require('../lib/employee');
 
 // test needing to be run against employee
 describe("Employee", () => {
-    describe("getName", () => {
-        it("should return new string", () => {
-            const name = "Chandler";
+    describe("hasName", () => {
+        it("should return given name", () => {
+            const employeeObj = new Employee("chandler", 234, "chandler@gmail.com", "Employee");
 
-            const result = new Employee().getName(name);
 
-            expect(result).toEqual(name);
-        });
-    });
-    describe("getId", () => {
-        it("should return new id", () => {
-            const id = "245";
-
-            const result = new Employee().getId(id);
-
-            expect(result).toEqual(id);
-        });
-    });
-    describe("getEmail", () => {
-        it("should return new email ", () => {
-            const email = "test@fakemail.com";
-
-            const result = new Employee().getEmail(email);
-
-            expect(result).toEqual(email);
-        });
-    });
-    describe("getRole", () => {
-        it("should return new role", () => {
-            const role = "Employee";
-
-            const result = new Employee().getRole(role);
-
-            expect(result).toEqual(role);
+            expect(employeeObj.getName()).toEqual("chandler");
+            expect(employeeObj.getId()).toEqual(234);
+            expect(employeeObj.getEmail()).toEqual("chandler@gmail.com");
+            expect(employeeObj.getRole()).toEqual("Employee");
         });
     });
 });

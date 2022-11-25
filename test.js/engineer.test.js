@@ -3,25 +3,15 @@ const Engineer = require('../lib/engineer');
 
 // test needing to be ran against engineer
 describe("Engineer", () => {
-    describe("getGithub", () => {
-        it("should return the new engineer github", () => {
-            const gitHub = "Cbaird21";
-
-            const result = new Engineer().getGithub(gitHub);
-
-            expect(result).toEqual(gitHub);
+    describe("hasInfo", () => {
+        it("should return the given info", () => {
+            const engineerObj = new Engineer("alice", 342, "wonderland@gmail.com", "Engineer");
+            expect(engineerObj.getName()).toEqual("alice");
+            expect(engineerObj.getId()).toEqual(342);
+            expect(engineerObj.getEmail()).toEqual("wonderland@gmail.com");
+            expect(engineerObj.getRole()).toEqual("Engineer");
         });
     });
-    describe("getRole", () => {
-        it("should return new role", () => {
-            const role = "Engineer";
-            const result = new Engineer().getRole(role);
-
-            expect(result).toEqual(role);
-
-        });
-
-    })
 });
 // can set github account via constructor
 
