@@ -97,7 +97,7 @@ const addIntern = [
 function engineerStart() {
     console.log("added engineer");
     inquirer.prompt(addEngineer).then((Response) => {
-        console.log(Response);
+        // console.log(Response);
         const engineer = new Engineer(
             Response.name,
             Response.id,
@@ -135,7 +135,7 @@ function generateEngineer(data) {
 function internStart() {
     console.log("You have added an intern");
     inquirer.prompt(addIntern).then((Response) => {
-        console.log(Response);
+        // console.log(Response);
         const intern = new Intern(
             Response.name,
             Response.id,
