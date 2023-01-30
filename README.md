@@ -1,5 +1,22 @@
 # Team Profile Generator
 
+
+## Technologies
+
+Jest, Node.js, JavaScript
+
+## Table of Contents
+
+-[Project Description](#description)  
+-[User Story](#user-story)  
+-[Acceptance Criteria](#acceptance-criteria)  
+-[Deployed Application](#deployed-application)  
+
+## Description  
+
+Invoke application too add team members to your roster using jest testing. 
+
+
 ## User Story
 
 AS A manager  
